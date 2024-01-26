@@ -1,0 +1,251 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1355922249821047340",
+      "lastPropertyId": "41:2707641182811648390",
+      "name": "RepositoryResponseEntityOb",
+      "properties": [
+        {
+          "id": "1:6020719516737501940",
+          "name": "archived",
+          "type": 1
+        },
+        {
+          "id": "2:2627313905594299130",
+          "name": "commentsUrl",
+          "type": 9
+        },
+        {
+          "id": "3:1348309606093232443",
+          "name": "contributorsUrl",
+          "type": 9
+        },
+        {
+          "id": "4:2651373677157915033",
+          "name": "createdAt",
+          "type": 9
+        },
+        {
+          "id": "5:2434332541530925467",
+          "name": "defaultBranch",
+          "type": 9
+        },
+        {
+          "id": "6:5102380465524021912",
+          "name": "deploymentsUrl",
+          "type": 9
+        },
+        {
+          "id": "7:4849823995525986038",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "8:5665529335508175504",
+          "name": "disabled",
+          "type": 1
+        },
+        {
+          "id": "9:8471584420662915743",
+          "name": "forks",
+          "type": 6
+        },
+        {
+          "id": "10:4690792605844258243",
+          "name": "forksCount",
+          "type": 6
+        },
+        {
+          "id": "11:6741350692438505769",
+          "name": "fullName",
+          "type": 9
+        },
+        {
+          "id": "12:9137434419725011090",
+          "name": "gitUrl",
+          "type": 9
+        },
+        {
+          "id": "13:5877703049638143467",
+          "name": "hasDiscussions",
+          "type": 1
+        },
+        {
+          "id": "14:8859447233014192420",
+          "name": "homepage",
+          "type": 9
+        },
+        {
+          "id": "15:892246781297736735",
+          "name": "htmlUrl",
+          "type": 9
+        },
+        {
+          "id": "16:5951258190695054533",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "17:4537308770048256749",
+          "name": "issuesUrl",
+          "type": 9
+        },
+        {
+          "id": "18:4753955688328072832",
+          "name": "labelsUrl",
+          "type": 9
+        },
+        {
+          "id": "19:6056205666069842788",
+          "name": "language",
+          "type": 9
+        },
+        {
+          "id": "20:1829532050700627025",
+          "name": "languagesUrl",
+          "type": 9
+        },
+        {
+          "id": "21:4779622685189536951",
+          "name": "license",
+          "type": 9
+        },
+        {
+          "id": "22:7587535624189709155",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "23:232642472467745244",
+          "name": "openIssues",
+          "type": 6
+        },
+        {
+          "id": "24:3302432020396100064",
+          "name": "openIssuesCount",
+          "type": 6
+        },
+        {
+          "id": "25:3478664552978320913",
+          "name": "owner",
+          "type": 9
+        },
+        {
+          "id": "26:2197705748841766109",
+          "name": "permissions",
+          "type": 9
+        },
+        {
+          "id": "27:1407949970489231189",
+          "name": "private",
+          "type": 1
+        },
+        {
+          "id": "28:8063228046911947012",
+          "name": "pullsUrl",
+          "type": 9
+        },
+        {
+          "id": "29:1800285924536242849",
+          "name": "pushedAt",
+          "type": 9
+        },
+        {
+          "id": "30:7024955892076454948",
+          "name": "releasesUrl",
+          "type": 9
+        },
+        {
+          "id": "31:4043391420069054268",
+          "name": "size",
+          "type": 6
+        },
+        {
+          "id": "32:3133618173556677496",
+          "name": "stargazersCount",
+          "type": 6
+        },
+        {
+          "id": "33:7939929058392679126",
+          "name": "subscribersUrl",
+          "type": 9
+        },
+        {
+          "id": "34:701807979298797304",
+          "name": "subscriptionUrl",
+          "type": 9
+        },
+        {
+          "id": "35:7339287268355022126",
+          "name": "teamsUrl",
+          "type": 9
+        },
+        {
+          "id": "36:5101958371608133264",
+          "name": "topics",
+          "type": 30
+        },
+        {
+          "id": "37:4421309686339069915",
+          "name": "updatedAt",
+          "type": 9
+        },
+        {
+          "id": "38:3801030718085154654",
+          "name": "url",
+          "type": 9
+        },
+        {
+          "id": "39:3276065401729169100",
+          "name": "visibility",
+          "type": 9
+        },
+        {
+          "id": "40:5194861409717186761",
+          "name": "watchers",
+          "type": 6
+        },
+        {
+          "id": "41:2707641182811648390",
+          "name": "watchersCount",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:2066051922241151857",
+      "lastPropertyId": "2:552387152270822526",
+      "name": "LastFetchTimeEntityOb",
+      "properties": [
+        {
+          "id": "1:734433958676867038",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:552387152270822526",
+          "name": "lastFetchTime",
+          "type": 10
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:2066051922241151857",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
