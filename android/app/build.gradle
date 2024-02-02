@@ -62,12 +62,12 @@ android {
     productFlavors{
         prod{
             dimension "default"
-            resValue "string", "app_name", "Git BS23"
+            resValue "string", "app_name", "Git Getter"
             applicationIdSuffix ""
         }
         dev{
             dimension "default"
-            resValue "string", "app_name", "Dev Git BS23"
+            resValue "string", "app_name", "Dev Git Git Getter"
             applicationIdSuffix ".dev"
         }
     }

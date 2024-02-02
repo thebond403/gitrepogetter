@@ -18,7 +18,7 @@ void setupApp(EnvironmentType type) async {
   runApp(
     ProviderScope(
         child: MaterialApp(
-      title: "Git BS23",
+      title: "Git-Getter",
       scaffoldMessengerKey: rootScaffoldMessengerKey,
       debugShowCheckedModeBanner: false,
       initialRoute: AppRouter.homePage,

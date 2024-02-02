@@ -3,7 +3,8 @@ class EnvironmentConfig {
   static EnvironmentType _environment = EnvironmentType.dev;
   static const String _devBaseURL = "https://api.github.com";
   static const String _productionBaseURL = "https://api.github.com";
-  static const String _accessToken = "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";
+  static const String _accessToken =
+      "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";
 
   static EnvironmentType get environment => _environment;
 

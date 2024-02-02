@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gitstaredrepogetter/layers/data/dto/home/repository_response_dto.dart';
 import 'package:gitstaredrepogetter/layers/data/ob_box/entities/home_entities/last_fetch_time_entity_ob.dart';
@@ -8,16 +7,19 @@ import 'package:gitstaredrepogetter/layers/data/source/home/home_git_repo_source
 import 'package:gitstaredrepogetter/layers/domain/repositories/home_repository.dart';
 
 final homeRepositoryProvider =
-    Provider<HomeRepository>((ref) => HomeRepositoryImpl(ref));
+    Provider<HomeRepository>((ref) => HomeRepositoryImpl());
 
 class HomeRepositoryImpl implements HomeRepository {
   
-  HomeRepositoryImpl(this._ref) {
-    localSource = HomeGitRepoSourceLocal(_ref);
+  factory HomeRepositoryImpl() {
+    return _instance;
+  }
+  static HomeRepositoryImpl get _instance => HomeRepositoryImpl._();
+  HomeRepositoryImpl._() {
+    localSource = HomeGitRepoSourceLocal();
     networkSource = HomeGitRepoSourceNetwork();
   }
 
-  final ProviderRef _ref;
 
   late HomeGitRepoSourceNetwork networkSource;
   late HomeGitRepoSourceLocal localSource;
@@ -30,10 +32,14 @@ class HomeRepositoryImpl implements HomeRepository {
       bool forceToLoadFromApi = false}) async {
     int perPage = query['per_page'] ?? 10;
     int pageNo = query['page'] ?? 1;
-    final totalSavedRepos = await localSource.getSavedReposCount();
-    if (totalSavedRepos < (perPage * pageNo)) {
-      forceToLoadFromApi = true;
-    } 
+    try {
+      final totalSavedRepos = await localSource.getSavedReposCount();
+      if (totalSavedRepos < (perPage * pageNo)) {
+        forceToLoadFromApi = true;
+      } 
+    } catch (error) {
+      log(error.toString());
+    }
     LastFetchTimeEntityOb lastFetchTime = await localSource.getLastFetchTime();
     DateTime now = DateTime.now();
     List<RepositoryResponseDto> repos = [];

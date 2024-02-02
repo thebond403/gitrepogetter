@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gitstaredrepogetter/layers/data/dto/home/repository_response_dto.dart';
 import 'package:gitstaredrepogetter/layers/data/ob_box/boxes/home_boxes/last_fetch_time_entity_box.dart';
 import 'package:gitstaredrepogetter/layers/data/ob_box/boxes/home_boxes/repository_response_entity_box.dart';
@@ -9,11 +8,10 @@ import 'package:gitstaredrepogetter/objectbox.g.dart';
 class HomeGitRepoSourceLocal {
   late final RepositoryResponseEntityBox _repoBox;
   late final LastFetchTimeEntityBox _lastFetchTimeBox;
-  final ProviderRef _ref;
 
-  HomeGitRepoSourceLocal(this._ref) {
-    _repoBox = _ref.read(repositoryEntityBoxProvider);
-    _lastFetchTimeBox = _ref.read(lastFetchTimeEntityBoxProvider);
+  HomeGitRepoSourceLocal() {
+    _repoBox = RepositoryResponseEntityBox();
+    _lastFetchTimeBox = LastFetchTimeEntityBox();
   }
 
   Future<List<RepositoryResponseDto>> getRepositoryFromLocal(
